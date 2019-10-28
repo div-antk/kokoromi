@@ -1,6 +1,6 @@
 # DB設計
 
-## councelingテーブル
+## counselingテーブル
 
 | Column      | Type | Option      |
 | ----------- | ---- | ----------- |
