@@ -28,12 +28,18 @@
       </ul>
     </div>
 
-    <%= render partial: "counseling" %>
-    <%# <%= render partial: "counseling/counseling", locals: { tweet: tweet} %>
+    <div class="counseling">
+      <% @counselings.each do |counseling| %>
+        <%= render partial: "counseling", locals: { counseling: counseling } %>
+      <% end %>
+      <%# <%= render partial: 'counseling' %>
+      <%# <%= render partial: 'counseling', collection: @counselings %>
+        <%# <%= render partial: "counseling/counseling", locals: { counseling: counseling} %>
+    </div>
 
   </div>
 
-  <footer>
+  <footer class="footer">
     <p>免責事項みたいなアレ</p>
   </footer>
 

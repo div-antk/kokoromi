@@ -12,13 +12,18 @@
     transform: translateY(-50%);
   }
 }
-
+.icon {
+  margin-right: 4px;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   background-color: #333333;
   .sidebar {
+    // position: -webkit-sticky;
+    position: sticky;
+    height: 600px;
     width: 280px;
     margin: 20px 20px 20px 20px;
     background-color: #444444;
@@ -28,23 +33,68 @@
     }
   }
   .counseling {
+    height: 640px;
     width: 100vw;
+    overflow: scroll;
     .counseling-text {
       // height: 500px;
       padding: 20px;
-      margin: 20px 20px 20px 0px;
+      margin: 0px 20px 0px 0px;
       background-color: #EEEEEE;
 
       & > h2 {
-        font-size: 28px;
-        margin-bottom: 8px;
+        font-size: 32px;
+        margin: 8px 0 12px 8px;
+        font-weight: bold;
       }
-      .profile {
-        font-size: 16px;
-        margin-bottom: 36px;
+      & > ul {
+        margin: 36px 0 36px 0;
+        & > li {
+          margin-bottom: 12px;
+        }
+      }
+      & > hr {
+        margin-top: 24px;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #444444;
+        border: 0;
+      }
+      .profiles {
+        height: 40px;
+        margin-left: 20px;
+        margin-bottom: 4px;
+        .user-icon {
+          margin-right: 12px;
+        }
+        .profile {
+          font-size: 12px;
+          font-weight: bold;
+          margin-bottom: 4px;
+        }
+        .profile2 {
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+      .issues {
+        font-size: 12px;
+        margin: 0 36px 20px 0;
+        text-align: right;
+        .bold {
+          font-weight: bold;
+        }
       }
     }
-    
-
   }
+  .mgr {
+    margin-right: 20px;
+  }
+}
+.footer {
+  background-color: #222222;
+  border-top: solid 1px #444444;
+  bottom: 0;
+  height: 80px;
 }
