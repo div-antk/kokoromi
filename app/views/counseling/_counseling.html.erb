@@ -1,13 +1,22 @@
-   <div class="counseling">
-      <%# 繰り返し表示で出す。インデックスはランダムか？？ %>
       <div class="counseling-text">
-        <h2>愛してるのひと言がどうしても言えない。</h2>
-        <p class="profile">東京都 バービーボイズ 17歳 男</p>
-        <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' %>
+      <%# <% @counselings.each do |f| %>
+        <h2><%= counseling.question %></h2>
+        <div class="profiles">
+          <p class="profile"><span class="mgr"><%= counseling.prefecture1 %></span><span class="mgr"><%= counseling.name1 %></span><span class="mgr"><%= counseling.age1 %></span><%= counseling.sex1 %></p>
+          <p class="profile2"><span class="mgr"><%= counseling.prefecture2 %></span><span class="mgr"><%= counseling.name2 %></span><span class="mgr"><%= counseling.age2 %></span><%= counseling.sex2 %></p>
+        </div>
+        <hr class="line">
         <ul>
-          <li>例えば、毎週土曜日にデートするようにして土曜日の男という印象を植えつける。</li>
-          <li>三回や四回デートしたその先は手を伸ばさなきゃだめだね。</li>
-          <li>歩く時に肩に手を回すなりして、人がいない時にパッとキスをする時、またはＣまでもっていって「愛してる」と言えばいい。</li>
+          <li>・<%= counseling.answer1 %></li>
+          <li>・<%= counseling.answer2 %></li>
+          <li>・<%= counseling.answer3 %></li>
         </ul>
+        <div class="issues">
+          <p class="issue1">出典：<span class="bold"><%= counseling.issue1 %></span></p>
+          <p class="issue2"><span class="bold"><%= counseling.issue2 %></span></p>
+          <p class="issue3"><span class="bold"><%= counseling.issue3 %></span></p>
+        </div>
       </div>
-    </div>
+            <%# <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' %>
+
+
