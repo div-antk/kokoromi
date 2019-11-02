@@ -5,14 +5,15 @@
           <p class="profile"><span class="mgr"><%= counseling.prefecture1 %></span><span class="mgr"><%= counseling.name1 %></span><span class="mgr"><%= counseling.age1 %></span><%= counseling.sex1 %></p>
           <p class="profile2"><span class="mgr"><%= counseling.prefecture2 %></span><span class="mgr"><%= counseling.name2 %></span><span class="mgr"><%= counseling.age2 %></span><%= counseling.sex2 %></p>
         </div>
-        <hr class="line">
+        <hr>
+
         <ul>
-          <li>・<%= counseling.answer1 %></li>
-          <li>・<%= counseling.answer2 %></li>
-          <li>・<%= counseling.answer3 %></li>
+          <li><%= icon 'fas', 'angle-right', class: 'icon' %><%= counseling.answer1 %></li>
+          <li><%= icon 'fas', 'angle-right', class: 'icon' %><%= counseling.answer2 %></li>
+          <li><%= icon 'fas', 'angle-right', class: 'icon' %><%= counseling.answer3 %></li>
         </ul>
         <div class="issues">
-          <p class="issue1">出典：<span class="bold"><%= counseling.issue1 %></span></p>
+          <p class="issue1"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue1 %></span></p>
           <p class="issue2"><span class="bold"><%= counseling.issue2 %></span></p>
           <p class="issue3"><span class="bold"><%= counseling.issue3 %></span></p>
         </div>

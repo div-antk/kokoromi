@@ -12,7 +12,9 @@
     transform: translateY(-50%);
   }
 }
-
+.icon {
+  margin-right: 4px;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -51,12 +53,13 @@
           margin-bottom: 12px;
         }
       }
-      .line {
-        margin-top: 32px;
+      & > hr {
+        margin-top: 24px;
       }
       .profiles {
-        height: 20px;
+        height: 28px;
         margin-left: 20px;
+        margin-bottom: 4px;
         .profile {
           font-size: 12px;
           font-weight: bold;
