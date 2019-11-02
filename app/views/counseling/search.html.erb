@@ -1,5 +1,50 @@
-  <div class="result">
-  <% @counselings.each do |counseling| %>
-    <%= counseling.question %>
-  <% end %>
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="試みの地平線のデータベースです">
+  <meta name="keyword" content="悩み相談,北方謙三">
+</head>
+
+<body>
+  <header class="title">
+    <%= image_tag 'kokoromi.png' %>
+  </header>
+
+  <div class="wrapper">
+
+    <div class="sidebar">
+      <ul class="search">
+        <%= search_form_for @q, url: search_path do |f| %>
+          <%= f.label :question_cont %>
+          <%= f.search_field :question_cont %>
+          <%= f.submit %>
+        <% end %>
+        <li>年齢</li>
+          <%= select_tag(:age, options_for_select((18..85).to_a)) %>
+        <li>性別</li>
+        <li>カテゴリー</li>
+        <li>都道府県</li>
+        <li>掲載号</li>
+      </ul>
+    </div>
+
+  <div class="counseling">
+    <% @counselings.each do |counseling| %>
+      <%= render partial: "search_counseling", locals: { counseling: counseling } %>
+    <% end %>
   </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>免責事項みたいなアレ</p>
+  </footer>
+
+</body>
+
+
+
+</html>
