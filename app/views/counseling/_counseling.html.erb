@@ -2,8 +2,10 @@
       <%# <% @counselings.each do |f| %>
         <h2><%= counseling.question %></h2>
         <div class="profiles">
-          <p class="profile"><span class="mgr"><%= counseling.prefecture1 %></span><span class="mgr"><%= counseling.name1 %></span><span class="mgr"><%= counseling.age1 %></span><%= counseling.sex1 %></p>
-          <p class="profile2"><span class="mgr"><%= counseling.prefecture2 %></span><span class="mgr"><%= counseling.name2 %></span><span class="mgr"><%= counseling.age2 %></span><%= counseling.sex2 %></p>
+          <p class="profile"><%= icon 'fas', 'user', class: 'user-icon' %><span class="mgr"><%= counseling.prefecture1 %></span><span class="mgr"><%= counseling.name1 %></span><span class="mgr"><%= counseling.age1 %></span><%= counseling.sex1 %></p>
+          <% if counseling.name2.present? %>
+            <p class="profile2"><%= icon 'fas', 'user', class: 'user-icon' %><span class="mgr"><%= counseling.prefecture2 %></span><span class="mgr"><%= counseling.name2 %></span><span class="mgr"><%= counseling.age2 %></span><%= counseling.sex2 %></p>
+          <% end %>
         </div>
         <hr>
 
@@ -14,8 +16,12 @@
         </ul>
         <div class="issues">
           <p class="issue1"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue1 %></span></p>
-          <p class="issue2"><span class="bold"><%= counseling.issue2 %></span></p>
-          <p class="issue3"><span class="bold"><%= counseling.issue3 %></span></p>
+          <% if counseling.issue2.present? %>
+            <p class="issue2"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue2 %></span></p>
+          <% end %>
+          <% if counseling.issue3.present? %>
+            <p class="issue3"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue3 %></span></p>
+          <% end %>
         </div>
       </div>
             <%# <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' %>

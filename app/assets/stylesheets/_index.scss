@@ -57,9 +57,12 @@
         margin-top: 24px;
       }
       .profiles {
-        height: 28px;
+        height: 40px;
         margin-left: 20px;
         margin-bottom: 4px;
+        .user-icon {
+          margin-right: 12px;
+        }
         .profile {
           font-size: 12px;
           font-weight: bold;
