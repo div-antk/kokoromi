@@ -18,8 +18,7 @@
           <p class="issue1"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue1 %></span></p>
           <% if counseling.issue2.present? %>
             <p class="issue2"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue2 %></span></p>
-          <% end %>
-          <% if counseling.issue3.present? %>
+          <% elsif counseling.issue3.present? %>
             <p class="issue3"><%= icon 'fas', 'book-open', class: 'icon' %><span class="bold"><%= counseling.issue3 %></span></p>
           <% end %>
         </div>
