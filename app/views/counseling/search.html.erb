@@ -10,26 +10,12 @@
 
 <body>
   <header class="title">
-    <%= image_tag 'kokoromi.png' %>
+    <%= link_to image_tag('kokoromi.png', class: 'img'), root_path %>
   </header>
 
   <div class="wrapper">
 
-    <div class="sidebar">
-      <ul class="search">
-        <%= search_form_for @q, url: search_path do |f| %>
-          <%= f.label :question_cont %>
-          <%= f.search_field :question_cont %>
-          <%= f.submit %>
-        <% end %>
-        <li>年齢</li>
-          <%= select_tag(:age, options_for_select((18..85).to_a)) %>
-        <li>性別</li>
-        <li>カテゴリー</li>
-        <li>都道府県</li>
-        <li>掲載号</li>
-      </ul>
-    </div>
+    <%= render partial: "sidebar" %>
 
   <div class="counseling">
     <% @counselings.each do |counseling| %>

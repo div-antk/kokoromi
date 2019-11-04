@@ -3,14 +3,14 @@
   background-color: #222222;
   position: relative;
   border-bottom: solid 1px #444444;
-  & > img {
-    margin-left: 24px;
-    width: 200px;
-    line-height: 120px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  .img {
+      margin-left: 28px;
+      width: 200px;
+      line-height: 120px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 }
 .icon {
   margin-right: 4px;
