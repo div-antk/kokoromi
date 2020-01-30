@@ -1,0 +1,65 @@
+.sidebar {
+  .search_icon {
+    margin-right: 4px;
+    color: #999999;
+  }
+  height: 600px;
+  width: 280px;
+  margin: 20px 20px 20px 20px;
+  background-color: #444444;
+  .search {
+    padding: 20px;
+    color: #FFFFEE;
+    }
+  .text_field {
+    width: 240px;
+  }
+  .question_search {
+    margin-bottom: 12px;
+  }
+  .answer_search {
+    margin-bottom: 12px;
+  }
+  .q_and_a_search {
+    margin-bottom: 12px;
+  }
+  .age_search {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+  & > select {
+    width: 80px;
+      height: 24px;
+      font-size: 12px;
+      }
+    }
+  .sex_search {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    }
+  .prefecture_search {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    & > select {
+      width: 80px;
+      height: 24px;
+      font-size: 12px;
+      }
+    }
+  .issue_search {
+    margin-bottom: 32px;
+    overflow: hidden;
+    width: 240px;
+    & > select {
+      width: 100%;
+      height: 24px;
+      font-size: 12px;
+      }
+    }
+  .submit {
+    width: 120px;
+    // margin: 0 50%;
+  }
+}
