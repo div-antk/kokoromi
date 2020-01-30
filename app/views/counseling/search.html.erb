@@ -17,14 +17,11 @@
 
     <%= render partial: "sidebar" %>
 
-    <div class="counseling">
-      <% @counselings.each do |counseling| %>
-        <%= render partial: "counseling", locals: { counseling: counseling } %>
-      <% end %>
-      <%# <%= render partial: 'counseling' %>
-      <%# <%= render partial: 'counseling', collection: @counselings %>
-        <%# <%= render partial: "counseling/counseling", locals: { counseling: counseling} %>
-    </div>
+  <div class="counseling">
+    <% @counselings.each do |counseling| %>
+      <%= render partial: "search_counseling", locals: { counseling: counseling } %>
+    <% end %>
+  </div>
 
   </div>
 
