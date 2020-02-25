@@ -3,7 +3,7 @@ class CounselingController < ApplicationController
   def index
     # @counselings = Counseling.offset(rand(Counseling.count)).first(5)
     # @counselings = Counseling.all
-    # @counseling = = Counseling.order('id DESC')
+    # @counselings = Counseling.order('age1 DESK').page(params[:page]).per(5)
 
     @q = Counseling.ransack(params[:q])
     @counselings = @q.result(distinct: true)
